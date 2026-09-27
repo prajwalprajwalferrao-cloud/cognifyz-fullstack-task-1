@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="card success-card">
+      <div class="success-icon">✓</div>
+      <h1>Registration Successful</h1>
+      <p class="subtitle">Your submitted information was received by the server.</p>
+
+      <div class="summary">
+        <div><span>Name</span><strong><%= student.name %></strong></div>
+        <div><span>Email</span><strong><%= student.email %></strong></div>
+        <div><span>College</span><strong><%= student.college %></strong></div>
+        <div><span>Course</span><strong><%= student.course %></strong></div>
+        <div><span>Skills</span><strong><%= student.skills %></strong></div>
+      </div>
+
+      <a class="back-link" href="/">← Submit another response</a>
+    </section>
+  </main>
+</body>
+</html>

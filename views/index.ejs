@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="card">
+      <div class="badge">Cognifyz Internship • Task 1</div>
+      <h1>Student Registration Portal</h1>
+      <p class="subtitle">
+        Enter your details below. The form is submitted to an Express server
+        and the response is rendered dynamically using EJS.
+      </p>
+
+      <% if (typeof error !== "undefined") { %>
+        <div class="alert"><%= error %></div>
+      <% } %>
+
+      <form action="/register" method="POST" class="form-grid">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Prajwal Ferrao" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="field">
+          <label for="college">College</label>
+          <input id="college" name="college" type="text" placeholder="NMAM Institute of Technology" required>
+        </div>
+
+        <div class="field">
+          <label for="course">Course</label>
+          <input id="course" name="course" type="text" placeholder="B.Tech AI & ML" required>
+        </div>
+
+        <div class="field full">
+          <label for="skills">Skills</label>
+          <textarea id="skills" name="skills" rows="4"
+            placeholder="Node.js, Express, JavaScript, React..." required></textarea>
+        </div>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
